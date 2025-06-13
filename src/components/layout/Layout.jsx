@@ -129,10 +129,6 @@ const Layout = () => {
       label: "Calendar",
       path: "/calendar",
     },
-    {
-      id: "logout",
-      label: "Logout",
-    },
   ];
 
   const navMenuItems = [
@@ -148,18 +144,6 @@ const Layout = () => {
       icon: CalendarMonthIcon,
       path: "/calendar",
     },
-    // {
-    //   id: "Tags",
-    //   label: "Tags",
-    //   icon: StyleIcon,
-    //   path: "/tags",
-    // },
-    // {
-    //   id: "Settings",
-    //   label: "Settings",
-    //   icon: SettingsIcon,
-    //   path: "/settings",
-    // },
   ];
 
   return (

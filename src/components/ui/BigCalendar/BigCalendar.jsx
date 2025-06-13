@@ -20,9 +20,6 @@ const formatDateToYYYYMMDD = (date) => {
 const getMonthName = (date) =>
   date.toLocaleString("default", { month: "long" });
 
-// --- Components (from previous context, simplified for standalone) ---
-
-// This would typically be a reusable component from your components/ directory
 const EntryCard = ({ entry }) => {
   const navigate = useNavigate();
 

@@ -23,16 +23,13 @@ const BottomNavigation = ({ items }) => {
         value={selectedIndex}
         onChange={(event, newValue) => handleChange(newValue)}
       >
-        {items.map((item) => (
+        {items?.map((item) => (
           <BottomNavigationAction
             key={item.id}
             label={item.label}
             icon={<item.icon />}
           />
         ))}
-        {/* <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} /> */}
       </BottomNav>
     </Paper>
   );

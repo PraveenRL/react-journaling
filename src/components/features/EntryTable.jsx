@@ -43,6 +43,7 @@ const headCells = [
     disablePadding: true,
     align: "center",
     sortable: true,
+    width: "20%",
   },
   {
     id: "date",
@@ -254,13 +255,20 @@ const EntryTable = ({ entries, handleView, handleEdit, handleDelete }) => {
                     key={row.id}
                     sx={{ cursor: "pointer" }}
                   >
-                    <TableCell component="th" id={labelId} scope="row">
+                    <TableCell
+                      component="th"
+                      id={labelId}
+                      scope="row"
+                      sx={{ pr: 1 }}
+                    >
                       {row.title}
                     </TableCell>
-                    <TableCell align="right">
-                      {row.date ? dayjs(row.date).format("DD-MM-YYYY") : null}
+                    <TableCell align="right" sx={{ pl: 0, pr: 1 }}>
+                      <Typography noWrap>
+                        {row.date ? dayjs(row.date).format("DD-MM-YYYY") : null}
+                      </Typography>
                     </TableCell>
-                    <TableCell align="left">
+                    <TableCell align="left" sx={{ pr: 1 }}>
                       <Typography
                         noWrap
                         fontSize="0.875rem"
@@ -269,22 +277,21 @@ const EntryTable = ({ entries, handleView, handleEdit, handleDelete }) => {
                         {row.description}
                       </Typography>
                     </TableCell>
-                    <TableCell align="center">
-                      {row.tags &&
-                        row.tags.map((tag) => (
-                          <Chip
-                            key={tag}
-                            label={tag}
-                            variant="outlined"
-                            onClick={() => console.log()}
-                            sx={{ mb: 1 }}
-                          />
-                        ))}
+                    <TableCell align="center" sx={{ pl: 0, pr: 1 }}>
+                      {row.tags?.map((tag) => (
+                        <Chip
+                          key={tag}
+                          label={tag}
+                          variant="outlined"
+                          onClick={() => console.log()}
+                          sx={{ mb: 1 }}
+                        />
+                      ))}
                     </TableCell>
-                    <TableCell align="center">
+                    <TableCell align="center" sx={{ pl: 0, pr: 1 }}>
                       {row.moods.map((mood) => mood.icon)}
                     </TableCell>
-                    <TableCell align="center">
+                    <TableCell align="center" sx={{ px: 0 }}>
                       <IconButton onClick={() => handleView(row)}>
                         <VisibilityIcon />
                       </IconButton>

@@ -45,5 +45,3 @@ const IconMenu = ({ children, id, label, menuItems, onSelect }) => {
 };
 
 export default IconMenu;
-
-// https://mui.com/material-ui/react-app-bar/#app-bar-with-menu

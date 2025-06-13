@@ -117,18 +117,12 @@ const AddEditEntryPage = () => {
                 <Controller
                   name="date"
                   control={control}
-                  //   rules={{ required: "Date is required" }}
                   render={({ field }) => (
                     <DatePicker
                       {...field}
                       label="Select Date"
                       value={field?.value || null}
                       format="DD-MM-YYYY"
-                      //   slotProps={{
-                      //     textField: {
-                      //       helperText: errors?.date?.message,
-                      //     },
-                      //   }}
                     />
                   )}
                 />
